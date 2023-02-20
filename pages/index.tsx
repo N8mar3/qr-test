@@ -1,9 +1,18 @@
-import Link from 'next/link'
+import type { NextPage } from "next";
+import Header from "./components/header";
+import { Container } from "@mui/system";
+import MiddleBlock from "./components/middleblock"
 
-export default function IndexPage() {
+const Home: NextPage = () => {
+  
   return (
     <div>
-      Hello World. <Link href="/about">About</Link>
+      <Container maxWidth="sm">
+        <Header/>
+        <MiddleBlock/>
+      </Container>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
